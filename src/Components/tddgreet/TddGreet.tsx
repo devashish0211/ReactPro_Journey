@@ -1,7 +1,5 @@
-type GreetProps = {
-  name?: string;
-};
+import { tddGreetProps } from "./tddGreet.types";
 
-export const TddGreet = (props: GreetProps) => {
-  return <div>Hello {props.name}</div>;
+export const TddGreet = (props: tddGreetProps) => {
+  return <div>Hello {props.name ? props.name : "Guest"}</div>;
 };
